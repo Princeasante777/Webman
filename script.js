@@ -52,6 +52,14 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
   });
 });
 
+// Close mobile menu when a link is clicked
+document.querySelectorAll('#mobileMenu a').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.add('hidden');
+  });
+});
+
+
 // Mobile menu toggle
 const menuBtn = document.getElementById('menuBtn');
 const mobileMenu = document.getElementById('mobileMenu');
